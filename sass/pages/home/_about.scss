@@ -1,0 +1,59 @@
+.about {
+    background-image: linear-gradient(to right, #36e2bea6, #32a9d8b3);
+    padding: 8rem;
+    clip-path: polygon(0% 0%, 50% 15%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
+    overflow: visible;
+    
+    
+
+    grid-column: full-start / full-end;
+
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        grid-gap: 5rem;
+        align-items: center;
+        max-width: $site-width;
+        margin: 0 auto;
+
+        padding-top: 30rem;
+        padding-bottom: 25rem;
+    }
+
+    &__img {
+        width: 100%;
+        -webkit-clip-path: polygon(0% 0%, 75% 20%, 100% 50%, 75% 80%, 0% 100%, 10% 50%);;
+        clip-path: polygon(0% 0%, 75% 20%, 100% 50%, 75% 80%, 0% 100%, 10% 50%);
+        height: 100%;
+        margin-left: 5rem;
+        margin-top: -5rem;
+
+        transition: all 0.5s cubic-bezier(0, 0, 0, 1.46)!important;
+
+        &:hover {
+         -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
+         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
+        }
+    }
+
+    &__text {  
+        color: white;
+        margin: -7rem 0 2rem 6rem;
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: $color-white-faded;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .about {
+        grid-template-columns: auto;
+    }
+}

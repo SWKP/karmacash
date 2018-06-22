@@ -1,0 +1,120 @@
+.team {
+    //positioning
+    margin-bottom: -315px;
+
+    color: white;
+    grid-column: full-start / full-end;
+    padding: 15rem 8rem 45rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    &__video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -2;
+        opacity: 1;
+
+        &--overlay{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: #0667ef;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    }
+    
+    h1 {
+        text-align: center;
+    }
+
+    &__content {
+        max-width: $site-width;
+        margin: 0 auto!important;
+    }
+
+    img {
+        position: relative;
+        z-index: 0;
+        margin-bottom: -14rem;
+
+    }
+    &__members {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr));
+        grid-gap: 8rem;
+    }
+
+    &__member {
+
+        p {
+            
+        }
+    }
+
+    &__avatar {
+        position: relative;
+        width: 100%;
+        z-index: 0;
+        border-radius: 50% 2rem 0 0;
+    }
+
+
+
+
+
+
+}
+
+.member {
+
+    &__name {
+        clip-path: polygon(0% 70%, 100% 0%, 100% 100%, 0% 100%);
+        position: relative;
+        background-color: $color-primary;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+        padding-top: 13rem;
+        z-index: 20;
+        font-weight: 600;
+        text-align: right;
+    }
+
+    &__bio {
+        background-color: #36e2bd1c;
+        padding: 2rem 1rem 1rem;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &__name {
+        
+        h4 {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__occupation {
+        font-size: 1.4rem;
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        background-color: #36e2bd6b;
+        padding: 3rem 2rem 4rem 2rem;
+        border-radius: 0 0 50% 2rem;
+    }
+}

@@ -1,0 +1,208 @@
+.contact {
+    grid-column: center-start / center-end;
+    padding: 8rem;
+    margin: 0 auto;
+    width: 100%;
+
+    &__container {
+        padding: 5rem 0;
+        border-radius: 20px;
+        background-color: #36e2be;
+        margin: 10rem 0 30rem 0;
+    }
+
+    h1 { text-align: center; }
+
+    // Grid
+    @mixin grid($column) {
+        width:(100% / 12) * $column;
+        margin:5rem auto;
+    }
+
+    // Transition Ease
+    @mixin ease($time:333ms, $attr:all, $curve:ease-in-out) {
+        -webkit-transition: $attr $time $curve;
+        -moz-transition: $attr $time $curve;
+        -o-transition: $attr $time $curve;
+        -ms-transition: $attr $time $curve;
+        transition: $attr $time $curve;
+    }
+
+    //-- Lato --//
+    @mixin lato-1 {font-family: 'Lato', sans-serif; font-weight:100;}
+    @mixin lato-1-i {@include lato-1; font-style:italic;}
+
+    @mixin lato-3 {font-family: 'Lato', sans-serif; font-weight:300;}
+    @mixin lato-3-i {@include lato-3; font-style:italic;}
+
+    @mixin lato-4 {font-family: 'Lato', sans-serif; font-weight:400;}
+    @mixin lato-4-i {@include lato-4; font-style:italic;}
+
+    @mixin lato-7 {font-family: 'Lato', sans-serif; font-weight:700;}
+    @mixin lato-7-i {@include lato-7; font-style:italic;}
+
+    @mixin lato-9 {font-family: 'Lato', sans-serif; font-weight:900;}
+    @mixin lato-9-i {@include lato-9; font-style:italic;}
+
+
+    // Colors
+    $blue:#1d1d1d;
+    $dark-orange:darken($color-primary, 20%);
+    $grey:#B6B6B6;
+    $light-grey:lighten($grey, 15%);
+
+
+    $field-color:#E8E9EA;
+
+
+
+
+    section {
+        background:white;
+        margin:60px auto 120px;
+        border-top:15px solid $blue;
+        text-align:center;
+        padding:50px 0 110px;
+        width:100%;
+        max-width:1100px;
+    
+    h1 {
+        margin-bottom:40px;
+        font-size:4em;
+        text-transform:uppercase;
+        @include lato-1;
+    }
+    }
+
+    // Form
+    form {
+        @include grid(7);
+
+        .field {
+            width:100%;
+            position:relative;
+            margin-bottom:15px;
+
+            $hover-label-width:18%;
+            $placeholder-bumper:1.5%;
+            $label-padding:25px;
+
+            // Label
+            label {
+                text-align: center;
+                    text-transform: uppercase;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    background:$blue;
+                    width:100%;
+                    padding:($label-padding + 0px) 0;
+                    font-size: 1.8em;
+                    letter-spacing: 0.075em;
+                    color: grey;
+
+                    @include ease(333ms);
+
+                    // Checkmark
+                    + span {
+                        font-family: 'SSStandard';
+                        opacity: 0;
+                        color:white;
+                        display: block;
+                        position:absolute;
+                        top: 12px;
+                        left: 7%;
+                        font-size: 2.5em;
+                        text-shadow:1px 2px 0 $dark-orange;
+
+                        @include ease(333ms);
+                    }
+            }
+
+            // Fields
+            input[type="text"],
+            textarea {
+                    border:none;
+                    background:$field-color;
+                    width:100%;
+                    margin:0;
+                    padding:$label-padding 0;
+                    padding-left:$hover-label-width + $placeholder-bumper;
+                    color:$blue;
+                    font-size: 1.6rem;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+
+                    &#msg {
+                        height: 72px;
+                        resize: none;
+                        @include ease(333ms);
+                    }
+
+                    // Focus and JS Toggle Class
+                    &:focus,
+                    &.focused {
+                        outline:none;
+
+                        &#msg {
+                                padding-bottom:150px;
+                        }
+
+                        + label {
+                                width:$hover-label-width;
+                                background:$color-primary;
+
+                        }
+                    }
+
+                    // JS Toggle Class
+                    &.focused {
+                        + label {
+                                color: $color-primary;
+                        }
+                    }
+            }
+
+            // Field Hover
+            &:hover {
+                    label {
+                        width:$hover-label-width;
+                        background:$blue;
+                        color:white;
+                    }
+            }
+        }
+
+        // Submit Button
+        input[type="submit"] {
+            background:$color-primary;
+            color:white;
+            -webkit-appearance: none;
+            border: none;
+            text-transform: uppercase;
+            position:relative;
+            padding: 13px 50px;
+            font-size: 1.4em;
+            letter-spacing: 0.1em;
+            @include lato-3;
+            @include ease;
+    
+            &:hover {
+                    background:$blue;
+                    color:$color-primary;
+            }
+
+            &:focus {
+                    outline:none;
+                    background:$dark-orange;
+            }
+        }
+}
+}
+
+//FIXES
+
+.contact form .field label {
+    padding: 21.5px 0!important;
+}
+

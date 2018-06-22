@@ -1,0 +1,43 @@
+.parallax {
+        
+        &__items {
+                position:relative; 
+                display:block; 
+                height:100%; 
+                width:100%; 
+                top:0px; 
+                left:0px; 
+        }
+
+        &__one {
+                border-radius: 50%;
+                position: absolute;
+                top: 200px;
+                left: 50px;
+                width: 200px;
+                height: 200px;
+                background: #36e2bd36;
+        }
+
+        &__two {
+                border-radius: 50%;
+                position: absolute;
+                top: 200px;
+                left: 200px;
+                width: 200px;
+                height: 200px;
+                background: blue;
+        }
+
+        &__three {
+                border-radius: 50%;
+                position: absolute;
+                top: 1300px;
+                left: 200px;
+                width: 1200px;
+                height: 1200px;
+                background: #36e2bd42;
+        }
+        
+
+}
