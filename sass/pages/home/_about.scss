@@ -1,10 +1,9 @@
 .about {
-    background-image: linear-gradient(to right, #36e2bea6, #32a9d8b3);
+    z-index: 5;
+    background-image: linear-gradient(to right, #36e2be, #32a9d8);
     padding: 8rem;
     clip-path: polygon(0% 0%, 50% 15%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
     overflow: visible;
-    
-    
 
     grid-column: full-start / full-end;
 
@@ -22,10 +21,28 @@
         padding-bottom: 25rem;
     }
 
+    &__image {
+        &::after {
+            content: "";
+            position: relative;
+            display: block;
+            top: 0;
+            left: 11px;
+            width: 100%;
+            filter: blur(27px);
+            height: 3rem;
+            border-radius: 50%;
+            background-color: black;
+            z-index: -1;
+            margin-top: -1rem;
+        }
+    }
+
     &__img {
         width: 100%;
-        -webkit-clip-path: polygon(0% 0%, 75% 20%, 100% 50%, 75% 80%, 0% 100%, 10% 50%);;
-        clip-path: polygon(0% 0%, 75% 20%, 100% 50%, 75% 80%, 0% 100%, 10% 50%);
+        opacity: .6;
+        -webkit-clip-path: polygon(0% 0%, 75% 10%, 100% 50%, 75% 90%, 0% 100%, 10% 50%);;
+        clip-path: polygon(0% 0%, 75% 10%, 100% 50%, 75% 90%, 0% 100%, 20% 50%);
         height: 100%;
         margin-left: 5rem;
         margin-top: -5rem;
@@ -33,9 +50,11 @@
         transition: all 0.5s cubic-bezier(0, 0, 0, 1.46)!important;
 
         &:hover {
+            opacity: 1;
          -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
          clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
         }
+
     }
 
     &__text {  
@@ -43,6 +62,7 @@
         margin: -7rem 0 2rem 6rem;
 
         h1 {
+            font-size: 4.2rem;
             margin-bottom: 1rem;
         }
 

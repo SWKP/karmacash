@@ -1,4 +1,7 @@
 .header {
+    position: relative;
+    height: 85vh;
+    z-index: 1;
     //background-image: linear-gradient(to right bottom, rgba(56, 248, 255, 0.3),
     //rgba(66, 136, 230, 1)), url(../img/header.jpg);
     background-size: cover;
@@ -13,11 +16,15 @@
     grid-column: full-start / full-end;
 
     &__content {
+        position: relative;
+        top: -10rem;
         z-index: 1;
         width: $site-width;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin: 0 auto;
+
     }
 
     &__title {
@@ -46,7 +53,8 @@
                 text-shadow: 0 0px 11px #23e64d82;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                -webkit-text-stroke: 2px white;
+                -webkit-text-stroke: 2px #000;
+                filter: invert(1);
             }
         }
 
@@ -59,6 +67,15 @@
     &__countdown {
         width: 100%;
         max-width: 50rem;
+    }
+
+    &__money {
+        position: absolute;
+        bottom:-20rem;
+        left: 0;
+        filter: invert(1);
+        opacity: .5;
+        width: 100vw;
     }
 }
 
@@ -99,9 +116,10 @@ div#countdown p{
 p.numbers{
 	width: 100%;
 	height: 88%;
-	background: #335f79;
+	background: #1b3b65;
 	margin-top: -2.5rem;
     padding-top: 3rem;
+    padding-bottom: 5rem;
     font-size: 4rem;
 }
 
@@ -109,7 +127,7 @@ p.strings{
 	width: 100%;
 	height: auto;
 	padding: 1.4rem 0 2.5rem;
-	background: #335f79;
+	background: #1b3b65;
     color: #FFFFFF;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
 }

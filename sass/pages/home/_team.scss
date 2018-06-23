@@ -1,4 +1,5 @@
 .team {
+    z-index: 6;
     //positioning
     margin-bottom: -315px;
 
@@ -43,6 +44,8 @@
     &__content {
         max-width: $site-width;
         margin: 0 auto!important;
+        padding-top: 10rem;
+        padding-bottom: 35rem;
     }
 
     img {
@@ -58,6 +61,11 @@
     }
 
     &__member {
+        overflow:hidden;
+        border-radius: 15rem 2rem 15rem 2rem;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 50px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 50px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 50px;
 
         p {
             
@@ -68,7 +76,6 @@
         position: relative;
         width: 100%;
         z-index: 0;
-        border-radius: 50% 2rem 0 0;
     }
 
 
@@ -83,7 +90,7 @@
     &__name {
         clip-path: polygon(0% 70%, 100% 0%, 100% 100%, 0% 100%);
         position: relative;
-        background-color: $color-primary;
+        background-color: #1b3b65;
         padding-right: 2rem;
         padding-bottom: 2rem;
         padding-top: 13rem;
@@ -93,7 +100,7 @@
     }
 
     &__bio {
-        background-color: #36e2bd1c;
+        background-color: #36e2be;
         padding: 2rem 1rem 1rem;
         color: white;
         text-align: center;
@@ -115,6 +122,5 @@
         font-size: 1.4rem;
         background-color: #36e2bd6b;
         padding: 3rem 2rem 4rem 2rem;
-        border-radius: 0 0 50% 2rem;
     }
 }

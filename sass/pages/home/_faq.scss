@@ -1,4 +1,6 @@
 .faq {
+    z-index: 8;
+    
     -webkit-clip-path: ellipse(119% 48% at 50% 50%);
     clip-path: ellipse(119% 48% at 50% 50%);
     grid-column: full-start / full-end;

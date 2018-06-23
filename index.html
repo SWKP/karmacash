@@ -36,21 +36,9 @@
             <div class="social__toggle">
 
             </div>
-
-
-
-            <!--
-            <div class="parallax__one paroller" data-paroller-factor="-0.4" data-paroller-type="foreground" data-paroller-direction="vertical"></div>
-            <div class="parallax__two"></div>
-            <div class="parallax__three paroller" data-paroller-factor="-0.1" data-paroller-type="foreground" data-paroller-direction="horizontal"></div>
-            <div class="parallax__four"></div>
-            <div class="parallax__five"></div>
-            <div class="parallax__six"></div>
-            -->
         </div>
-        <header class="header">
 
-            <nav class="navigation">
+        <nav class="navigation">
                 <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
                 <label for="navi-toggle" class="navigation__button">
@@ -73,18 +61,20 @@
                 </nav>
             </nav>
 
+        <header class="header">
+
             <div class="logo-box">
                 <img src="img/temp.png" alt="Logo" class="logo">
             </div>
 
-            <div class="header__content">
+            <div class="header__content parallaxElement" data-speed="-0.4">
                 <div class="header__title">
                     <h1>Karma <span>Cash</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur similique dolorem quia minus quam neque. adipisicing elit. Consequatur similique dolorem quia minus quam neque.</p>
                     <button class="btn">CLICK ME</button>
                     <button class="btn" style="margin-left: 30px;">CLICK ME</button>
                 </div>
-                <div class="header__countdown paroller" data-paroller-factor="-0.3" data-paroller-type="foreground" data-paroller-direction="vertical">
+                <div class="header__countdown">
                     <h3 class="countdown__title">Whitelist starts in</h3>
                         <div id="countdown">
                             <div class="cd-box">
@@ -106,14 +96,17 @@
                         </div>    
                 </div>
             </div>
+            <img class="header__money parallaxElement" data-speed="-0.3" src="img/parallax/moneyHeader01.png" alt="">
 
         </header>
 
         <section class="about">
             <div class="about__container">
-                    <img src="img/Serenity.jpg" alt="" class="about__img paroller" data-paroller-factor="-0.1" data-paroller-type="foreground" data-paroller-direction="horizontal">
+                <div class="about__image">
+                    <img src="img/Serenity.jpg" alt="" class="about__img">
+                </div>
                     <div class="about__text">
-                        <h1>Your alignment</h1>
+                        <h1>Everything you do comes back to you</h1>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga id officia officiis earum eligendi laborum quasi, itaque porro vel! Corrupti expedita beatae quos dicta tempora suscipit quasi. Consequatur, ea molestias?</p>
                         <br>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga id officia officiis earum eligendi laborum quasi, itaque porro vel! Corrupti expedita beatae quos dicta tempora suscipit quasi. Consequatur, ea molestias?</p>
@@ -123,7 +116,7 @@
 
         <section class="features">
             <h1 class="border-1">FEATURES</h1>
-            <div class="features__content">
+            <div class="features__content parallaxElement" data-speed="-0.3">
                     <div class="features__item">
                             <svg class="features__icon">
                                 <use xlink:href="img/icons/sprite.svg#icon-back-in-time"></use>
@@ -185,7 +178,15 @@
                             <button class="btn">LEARN MORE</button>
                         </div>
             </div>
-
+            <div class="floating__element01 parallaxElement" data-speed="-0.6">
+                <img src="img/parallax/money01.png" alt="">
+            </div>
+            <div class="floating__element02 parallaxElement" data-speed="-0.5">
+                <img src="img/parallax/money02.png" alt="">
+            </div>
+            <div class="floating__element03 parallaxElement" data-speed="-.8">
+                <img src="img/parallax/money03.png" alt="">
+            </div>
         </section>
 
         <section class="roadmap">
@@ -282,7 +283,7 @@
 
         <section class="platform">
             <h1 class="border-1">PLATFORM</h1>
-            <div class="platform__content">
+            <div class="platform__content parallaxElement" data-speed="-0.3">
                 <div class="platform__items">
                     <div class="platform__item">
                         <svg class="platform__icon">
@@ -312,7 +313,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="platform__media paroller" data-paroller-factor="0.15" data-paroller-type="foreground" data-paroller-direction="horizontal">
+                <div class="platform__media">
                     <img src="img/Adventurous.jpg" alt="Platform media">
                 </div>
             </div>
@@ -321,10 +322,10 @@
         <section class="team">
             <div class="team__video--overlay"></div>
             <video autoplay muted loop class="team__video">
-                    <source src="video/inkBackground01.mp4" type="video/mp4">
+                    <source src="video/inkBackground01.mp4#t=35" type="video/mp4">
             </video>
             <h1 class="border-1">TEAM</h1>
-            <div class="team__content">
+            <div class="team__content parallaxElement" data-speed="-0.3">
                 <div class="team__members">
                     <div class="team__member">
                         <img src="img/user-1.jpg" alt="Team Member" class="team__avatar">

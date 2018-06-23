@@ -86,7 +86,7 @@ p {
 
 .container {
     display: grid;
-    grid-template-rows: 85vh repeat(8, minmax(10rem, min-content)) min-content; // HORIZONTAL ALLIGNMENT
+    grid-template-rows: 0 85vh repeat(8, minmax(10rem, min-content)) min-content; // HORIZONTAL ALLIGNMENT
     grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; // VERTICAL ALLIGNMENT
 }
 
@@ -95,34 +95,6 @@ section {
     h1 {
         margin: 5rem 0 7.5rem 0;
     }
-}
-
-
-//Parallax css
-
-.parallax {
-  height: 100vh;
-
-  overflow-y: auto;
-  -webkit-perspective: 1px;
-  perspective: 1px;
-  }
-.parallax__layer {
-  padding: 100vh 0;
-  position: absolute;
-
-}
-.parallax__layer--base {
-  transform: translateZ(1);
-}
-.parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
-}
-
-.parallax__group {
-  position: relative;
-  height: 100vh;
-  transform-style: preserve-3d;
 }
 
 //Helper classes
@@ -141,11 +113,11 @@ section {
 //Scrollbar
 /* width */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 18px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #ffffff2d; 
+  background: #4b87db; 
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
