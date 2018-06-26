@@ -8,7 +8,10 @@
  * @url     https://github.com/iamhexcoder/parallax-element
  * @license MIT
  */
-(function( $, window, document, undefined ) { $.fn.parallaxElement = function(options) {
+if(!(navigator.userAgent.toLowerCase().indexOf('firefox') > -1)){
+  // Run Parallax in all browsers but Firefox due to lag
+
+  (function( $, window, document, undefined ) { $.fn.parallaxElement = function(options) {
 
     /*! requestAnimationFrame Polyfill via Paul Irish: https://gist.github.com/paulirish/1579671 */
     (function() {
@@ -221,6 +224,10 @@ $('.parallaxElement').parallaxElement({
     minWidth:      false  // Integer - minimum width the function should fire
   });
 
-  window.onbeforeunload = function () {
-    window.scrollTo(0 ,1);
-  }
+  //window.onbeforeunload = function () {
+  //  window.scrollTo(0 ,1);
+  //}
+
+
+}
+

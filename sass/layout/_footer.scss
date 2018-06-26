@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     border-top: 3px solid #36e2be1a;
     color: rgba(255, 255, 255, 0.801);
     grid-column: full-start / full-end;
@@ -49,6 +50,38 @@
     a:hover,
     a:active {
         color: white;
+    }
+
+    &__money {
+        position: absolute;
+        top: 8rem;
+        left: 20%;
+        opacity: .6;
+        filter: invert(1);
+    }
+
+    &__social {
+        border: 2px solid #15384c;
+        padding: .5rem;
+        margin: 0rem auto 7rem;
+        max-width: 20%;
+        min-width: 20rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__icon {
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: rgba(255, 255, 255, 0.527);
+        transition: all .3s;
+        transform: scale(1);
+        cursor: pointer;
+
+        &:hover {
+            fill: rgb(54, 226, 190);
+            transform: scale(1.2);
+        }
     }
 }
 

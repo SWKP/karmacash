@@ -62,8 +62,11 @@
         margin: -7rem 0 2rem 6rem;
 
         h1 {
+            position: relative;
             font-size: 4.2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2.5rem;
+
+            @include whiteDivider();
         }
 
         p {

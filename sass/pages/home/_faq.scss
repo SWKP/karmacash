@@ -16,54 +16,77 @@
         text-align: center; 
     }
 
-    &__content {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        grid-gap: 5rem;
+        align-items: center;
         max-width: $site-width;
         margin: 0 auto;
     }
-
-    &__items {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 5rem;
+    &__image {
+        width: 100%;
+    }
+    &__questions {
+        
     }
 
-    &__item {
-        max-width: 45rem;
-    }
 
-    &__icon {
-        margin: 0 auto;
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+      label {
+        position: relative;
         display: block;
-        height: 8rem;
-        width: 8rem;
-        padding: 1rem;
-        margin-bottom: 2rem;
-        background: white;
-        border-radius: 50%;
+        padding: 0 0 0 1em;
+        background: #16a085;
+        font-weight: bold;
+        line-height: 3;
+        cursor: pointer;
+      }
+      .blue label {
+        background: #2980b9;
+      }
+      .tab-content {
+        max-height: 0;
+        overflow: hidden;
+        background: #1abc9c;
+        -webkit-transition: max-height .35s;
+        -o-transition: max-height .35s;
+        transition: max-height .35s;
+      }
+      /* :checked */
+      input:checked ~ .tab-content {
+        max-height: 10em;
+      }
+      /* Icon */
+      label::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        width: 3em;
+        height: 3em;
+        line-height: 3;
+        text-align: center;
+        -webkit-transition: all .35s;
+        -o-transition: all .35s;
+        transition: all .35s;
+      }
+      input[type=checkbox] + label::after {
+        content: "+";
+      }
+      input[type=radio] + label::after {
+        content: "\25BC";
+      }
+      input[type=checkbox]:checked + label::after {
+        transform: rotate(315deg);
+      }
+      input[type=radio]:checked + label::after {
+        transform: rotateX(180deg);
+      }
 
-    }
-
-    &__entry {
-        background-color: #3392a1;
-        padding: 4rem;
-        border-radius: 20px;
-        margin-top: 4rem;
-        padding-top: 8rem;
-    }
-
-    &__title {
-
-    }
-
-    &__description {
-        padding: 3rem 0;
-    }
-}
-
-@media (max-width: 900px) {
-    .faq {
-        &__items {
-            grid-template-columns: auto;
-        }
-    }
 }

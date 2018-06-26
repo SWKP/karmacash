@@ -47,7 +47,7 @@
 
 
     // Colors
-    $blue:#1d1d1d;
+    $blue:#0c1a2b;
     $dark-orange:darken($color-primary, 20%);
     $grey:#B6B6B6;
     $light-grey:lighten($grey, 15%);
@@ -100,7 +100,8 @@
                     padding:($label-padding + 0px) 0;
                     font-size: 1.8em;
                     letter-spacing: 0.075em;
-                    color: grey;
+                    color: #fff;
+                    font-weight: 500;
 
                     @include ease(333ms);
 

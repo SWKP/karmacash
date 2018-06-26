@@ -22,8 +22,8 @@ $color-white-faded: rgba(255, 255, 255, 0.767);
 $color-black: #000;
 
 // FONT VARIABLES
-$font-primary: 'Poppins', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+$font-primary: 'Poppins', 'Arial', sans-serif;
+$font-display: 'Josefin Sans', 'Arial', sans-serif;
 
 $font-color-primary: rgb(78, 78, 78);
 
@@ -51,7 +51,7 @@ body {
     color: black;
     font-weight: 300;
     line-height: 1.6;
-    background-image:linear-gradient(to bottom, transparent 50%, #000),
+    background-image:linear-gradient(to bottom, transparent 50%, #0c1a2b),
      linear-gradient(to right, #2d4d7b, #4c88dc);
 }
 
@@ -70,8 +70,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p { 
-    font-size: 1.7rem;
-    line-height: 2.8rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
     font-weight: 300;
     font-family: $font-primary; 
   }
@@ -128,3 +128,16 @@ section {
   background: $color-primary; 
 }
 
+
+//GLOBAL MEDIA QUERIES
+@media only screen and (max-width: 950px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    html {
+        font-size: 45%;
+    }
+}

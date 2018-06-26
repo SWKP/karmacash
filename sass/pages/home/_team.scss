@@ -24,6 +24,7 @@
         height: auto;
         z-index: -2;
         opacity: 1;
+        filter: blur(4px);
 
         &--overlay{
             height: 100%;
@@ -55,6 +56,7 @@
 
     }
     &__members {
+        z-index: 2;
         display: grid;
         grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr));
         grid-gap: 8rem;
@@ -62,7 +64,7 @@
 
     &__member {
         overflow:hidden;
-        border-radius: 15rem 2rem 15rem 2rem;
+        border-radius: 15rem 2rem 2rem 2rem;
         -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 50px;
         -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 50px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 50px;
@@ -78,7 +80,24 @@
         z-index: 0;
     }
 
+    &__coin01 img {
+        filter: invert(1);
+        opacity: 1;
+        transform-origin: 50% 50%;
+        width: 10rem;
+        height: 10rem;
+        animation: rotate 20s linear infinite;
+    }
 
+    &__coin01 {
+        filter: blur(2px);
+        z-index: -1;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        animation:float 20s ease-in-out infinite;
+        //animation: rotate 20s linear infinite;
+    }
 
 
 
@@ -122,5 +141,26 @@
         font-size: 1.4rem;
         background-color: #36e2bd6b;
         padding: 3rem 2rem 4rem 2rem;
+    }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translateY(-250px);
+	}
+	100% {
+		transform: translatey(0px);
+    }
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
     }
 }
